@@ -1,0 +1,90 @@
+cv:
+  name: Wasif Faisal
+  label: Independent Security Researcher | Payment Fraud & Threat Intelligence
+  email: md.wasif.faisal@g.bracu.ac.bd
+  location: Dhaka, Bangladesh
+  image: ""
+  summary: Computer Science undergraduate at BRAC University, independent security researcher, and lead author of a faculty-supervised payment-security research project. My work spans card-not-present fraud ecosystems, payment authentication protocols, gateway and checkout-flow analysis, adversarial tradecraft monitoring, and trust-boundary review in transaction systems.
+
+  social_networks:
+    - network: GitHub
+      username: cswasif
+    - network: LinkedIn
+      username: cswasif
+
+  sections:
+    Education:
+      - institution: BRAC University
+        location: Dhaka, Bangladesh
+        area: Computer Science
+        studyType: BSc
+        end_date: 2026
+        highlights:
+          - Expected graduation in 2026.
+          - Academic interests include application security, systems security, fintech security, and protocol analysis.
+
+    Experience:
+      - company: Self-employed
+        position: Independent Security Researcher | Payment Fraud & Threat Intelligence
+        location: Remote
+        start_date: 2018-01
+        summary: Conduct independent security and threat-intelligence research focused on the card-not-present fraud ecosystem, payment abuse patterns, and attacker techniques targeting online transaction flows.
+        highlights:
+          - Monitor adversarial Telegram channels and earlier IRC carding communities to study fraud TTPs, tooling patterns, and actor tradecraft relevant to card-not-present abuse.
+          - Analyze fraud tooling, infrastructure patterns, and protocol abuse across payment environments, with focus on BIN enumeration, payment authentication flows, credential abuse, and access-control-related flaws.
+          - Conduct protocol-level research on payment authentication systems with emphasis on trust boundaries, request and response behavior, and secure-by-design analysis.
+          - Reverse engineer payment and authentication flows across gateway and orchestration patterns in support of protocol analysis and remediation design.
+          - Built the EMV 3-D Secure Protocol Lab, an open vendor-neutral interactive reference for visualizing, comparing, and debugging browser and app 3DS flows across published spec versions.
+          - Produce coordination-safe technical documentation and disclosure materials that translate high-level concerns into actionable engineering guidance.
+
+      - company: BRAC University
+        position: Security Researcher
+        location: Dhaka, Bangladesh
+        start_date: 2026
+        summary: Lead a faculty-supervised academic research effort on payment protocols, fintech infrastructure, and protocol-security weaknesses relevant to fraud enablement and secure-by-design improvements.
+        highlights:
+          - Serve as lead author for ongoing research on EMV 3DS flows, payment gateway behavior, and attacker-observable trust-boundary failures in real-world transaction systems.
+          - Perform core technical analysis, research writing, and trace review for publication-oriented work on payment authentication, access-control weaknesses, and defensible remediation approaches.
+          - Revised the project after a weak reject and extended the work with new protocol-level findings for resubmission to a stronger security venue.
+          - Support academic investigation of cryptographic auditing questions and entropy-related security issues in applied security contexts.
+
+    Projects:
+      - name: EMV 3-D Secure Protocol Lab
+        summary: Open, vendor-neutral interactive reference for visualizing, comparing, and debugging EMV 3DS browser and app flows across published specification versions.
+        url: https://github.com/cnpshield/3dslab
+        highlights:
+          - Mapped message flows, payload structures, and trust boundaries into a reusable research and teaching artifact for security researchers, payment engineers, and educators.
+          - Added versioned payload registries, field-level provenance, and spec-annotation support so protocol behavior can be inspected with precise normative context.
+          - Added reproducibility support through scenario snapshots, local payload validation, and threat-model documentation.
+
+      - name: Ongoing Research on Payment Authentication Protocol Security
+        summary: Multi-author faculty-supervised research project under revision for submission to a stronger security venue.
+        highlights:
+          - Focuses on payment authentication protocols, ecosystem trust boundaries, and implementation-facing security design questions.
+          - Emphasizes disciplined scope control, conservative claims, and engineering-focused communication for sensitive protocol-security work.
+
+      - name: Gateway Integration Analysis and Remediation Design
+        summary: Engineering-focused review of real-world gateway and orchestration flows with repair guidance for response normalization, flow hardening, and integration changes.
+        highlights:
+          - Analyzed merchant-visible behavior, request binding, and authentication-path design tradeoffs across hosted and merchant-hosted integrations.
+          - Drafted coordination-safe technical language that preserved attribution discipline while still making the engineering case clearly.
+
+    Skills:
+      - name: Security Research
+        level: Advanced
+        icon: fa-solid fa-shield-halved
+        keywords: Web and API security analysis, Product security review, Payment security and EMV 3DS flows, Protocol and standards analysis, Vulnerability research and responsible disclosure
+
+      - name: Fraud Intelligence
+        level: Advanced
+        icon: fa-solid fa-magnifying-glass
+        keywords: Fraud and risk signal analysis, Threat-intelligence collection, Adversarial tradecraft analysis, Payment gateway reverse engineering, Browser-flow debugging
+
+      - name: Tooling
+        level: Advanced
+        icon: fa-solid fa-laptop-code
+        keywords: Python, PowerShell, SQLite, Burp Suite, Git, Linux, Browser developer tools, Technical writing
+
+    Languages:
+      - name: English
+        summary: Fluent

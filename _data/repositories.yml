@@ -1,0 +1,8 @@
+github_users:
+  - cswasif
+
+repo_description_lines_max: 2
+
+github_repos:
+  - cswasif/cswasif
+  - cnpshield/3dslab
