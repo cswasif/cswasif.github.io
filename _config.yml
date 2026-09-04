@@ -12,9 +12,7 @@ description: > # the ">" symbol means to ignore newlines until "footer_text:"
   Independent security researcher focused on payment fraud, EMV 3DS, threat intelligence,
   and transaction-system security.
 footer_text: >
-  Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
-  Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-  Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
+  Independent security research portfolio focused on payment security, EMV 3DS, and fraud intelligence.
 keywords: payment security, EMV 3DS, fraud intelligence, threat intelligence, application security, product security
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: ⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
@@ -97,7 +95,7 @@ al_folio:
 # -----------------------------------------------------------------------------
 
 navbar_fixed: true
-footer_fixed: true
+footer_fixed: false
 search_enabled: true
 socials_in_search: true
 posts_in_search: true
