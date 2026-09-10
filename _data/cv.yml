@@ -4,7 +4,7 @@ cv:
   email: md.wasif.faisal@g.bracu.ac.bd
   location: Dhaka, Bangladesh
   image: ""
-  summary: Computer Science undergraduate at BRAC University and early-career independent security researcher focused on payment security, fraud intelligence, adversarial ecosystems, and protocol analysis. I bring long-running adversarial ecosystem monitoring, payment-authentication research, gateway and checkout-flow analysis, and disciplined technical writing oriented toward real transaction-system risk.
+  summary: Computer Science undergraduate at BRAC University and early-career independent security researcher focused on payment security, fraud intelligence, authentication ecosystems, and protocol analysis. I bring long-term attacker-informed defensive research, payment-authentication analysis, gateway and checkout-flow investigation, and disciplined technical writing oriented toward real transaction-system risk.
 
   social_networks:
     - network: GitHub
@@ -25,14 +25,14 @@ cv:
 
     Experience:
       - company: Self-employed
-        position: Independent Security Researcher | Payment Fraud & Threat Intelligence
+        position: Independent Security Researcher | Payment Security & Threat Intelligence
         location: Remote
         start_date: 2018-01
-        summary: Conduct independent security and threat-intelligence research focused on the card-not-present fraud ecosystem, payment abuse patterns, and attacker techniques targeting online transaction flows.
+        summary: Conduct independent security and threat-intelligence research focused on payment abuse patterns, attacker behavior relevant to online transaction flows, and defensive analysis of card-not-present risk.
         highlights:
-          - Have directly monitored adversarial communities for 8+ years since 2018, including earlier IRC carding communities and ongoing Telegram channels, to study fraud TTPs, tooling patterns, and actor tradecraft relevant to card-not-present abuse.
-          - Since 2019, have developed this long-term monitoring through an academic research lens focused on understanding why fraud actors operate the way they do, how tooling evolves, and how payment-abuse ecosystems adapt over time.
-          - Analyze fraud tooling, infrastructure patterns, and protocol abuse across payment environments, with focus on BIN enumeration, payment authentication flows, credential abuse, and access-control-related flaws.
+          - Since 2018, have maintained long-term attacker-informed study of payment-abuse ecosystems to understand fraud TTPs, tooling patterns, and tradecraft relevant to card-not-present risk.
+          - Translate long-running independent analysis into structured defensive research focused on how payment-abuse tooling evolves and how transaction ecosystems adapt under adversarial pressure.
+          - Analyze abuse tooling, infrastructure patterns, and protocol misuse across payment environments, with focus on payment authentication flows, credential abuse, and access-control-related weaknesses.
           - Conduct protocol-level research on payment authentication systems with emphasis on trust boundaries, request and response behavior, and secure-by-design analysis.
           - Reverse engineer payment and authentication flows across gateway and orchestration patterns in support of protocol analysis and remediation design.
           - Built the EMV 3-D Secure Protocol Lab, an open vendor-neutral interactive reference for visualizing, comparing, and debugging browser and app 3DS flows across published spec versions.
@@ -42,11 +42,11 @@ cv:
         position: Security Researcher
         location: Dhaka, Bangladesh
         start_date: 2026
-        summary: Lead a faculty-supervised academic research effort on payment protocols, fintech infrastructure, and protocol-security weaknesses relevant to fraud enablement and secure-by-design improvements.
+        summary: Contribute to a faculty-supervised academic research effort on payment protocols, fintech infrastructure, and secure-by-design questions under responsible handling constraints.
         highlights:
-          - Serve as lead author for thesis-driven and publication-oriented research on EMV 3DS flows, payment gateway behavior, and attacker-observable trust-boundary failures in real-world transaction systems.
-          - Perform core technical analysis, research writing, and trace review for ongoing work on payment authentication, access-control weaknesses, and defensible remediation approaches.
-          - Advance thesis work and manuscript development derived from the project, extending the analysis with new protocol-level findings and stronger evidence.
+          - Support thesis-aligned and publication-oriented research on payment authentication, gateway behavior, and trust-boundary security questions in real-world transaction systems.
+          - Perform core technical analysis, research writing, and trace review for ongoing confidential work on payment-security design and defensible remediation approaches.
+          - Contribute to manuscript development and evidence refinement for research that remains under responsible disclosure and publication timing constraints.
           - Support academic investigation of cryptographic auditing questions and entropy-related security issues in applied security contexts.
 
     Projects:
@@ -58,11 +58,11 @@ cv:
           - Added versioned payload registries, field-level provenance, and spec-annotation support so protocol behavior can be inspected with precise normative context.
           - Added reproducibility support through scenario snapshots, local payload validation, and threat-model documentation.
 
-      - name: Ongoing Research on Payment Authentication Protocol Security
-        summary: Multi-author faculty-supervised, thesis-aligned research project with manuscript development in progress for security-venue submission.
+      - name: Ongoing Research on Payment Authentication Security
+        summary: Multi-author faculty-supervised, thesis-aligned research project with manuscript development in progress under responsible handling constraints.
         highlights:
-          - Focuses on payment authentication protocols, ecosystem trust boundaries, and implementation-facing security design questions.
-          - Emphasizes disciplined scope control, conservative claims, and engineering-focused communication for sensitive protocol-security work.
+          - Focuses on payment authentication, ecosystem trust boundaries, and implementation-facing security design questions without disclosing confidential intermediate findings.
+          - Emphasizes disciplined scope control, conservative claims, and engineering-focused communication for sensitive security research.
 
       - name: Gateway Integration Analysis and Remediation Design
         summary: Engineering-focused review of real-world gateway and orchestration flows with repair guidance for response normalization, flow hardening, and integration changes.
