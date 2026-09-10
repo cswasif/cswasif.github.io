@@ -5,6 +5,7 @@ title: publications
 description: Research outputs and publication-ready work.
 nav: false
 nav_order: 2
+published: false
 ---
 
 <!-- _pages/publications.md -->
