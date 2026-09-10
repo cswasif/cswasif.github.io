@@ -1,10 +1,8 @@
 cv:
   name: Wasif Faisal
-  label: Early-Career Independent Security Researcher | Payment Security & Fraud Intelligence
+  headline: Early-Career Independent Security Researcher | Payment Security & Fraud Intelligence
   email: md.wasif.faisal@g.bracu.ac.bd
   location: Dhaka, Bangladesh
-  image: ""
-  summary: Computer Science undergraduate at BRAC University and early-career independent security researcher focused on payment security, fraud intelligence, authentication ecosystems, and protocol analysis. I bring long-term attacker-informed defensive research, payment-authentication analysis, gateway and checkout-flow investigation, and disciplined technical writing oriented toward real transaction-system risk.
 
   social_networks:
     - network: GitHub
@@ -13,6 +11,9 @@ cv:
       username: cswasif
 
   sections:
+    Summary:
+      - Computer Science undergraduate at BRAC University and early-career independent security researcher focused on payment security, fraud intelligence, authentication ecosystems, and protocol analysis. I bring long-term attacker-informed defensive research, payment-authentication analysis, gateway and checkout-flow investigation, and disciplined technical writing oriented toward real transaction-system risk.
+
     Education:
       - institution: BRAC University
         location: Dhaka, Bangladesh
