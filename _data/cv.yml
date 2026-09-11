@@ -1,10 +1,10 @@
 cv:
   name: Wasif Faisal
-  label: Independent Security Researcher | Payment Fraud & Threat Intelligence
+  label: Early-Career Independent Security Researcher | Payment Security & Fraud Intelligence
   email: md.wasif.faisal@g.bracu.ac.bd
   location: Dhaka, Bangladesh
   image: ""
-  summary: Computer Science undergraduate at BRAC University, independent security researcher, and lead author of a faculty-supervised payment-security research project. My work spans card-not-present fraud ecosystems, payment authentication protocols, gateway and checkout-flow analysis, adversarial tradecraft monitoring, and trust-boundary review in transaction systems.
+  summary: Computer Science undergraduate at BRAC University and early-career independent security researcher focused on payment security, fraud intelligence, adversarial ecosystems, and protocol analysis. I bring long-running adversarial ecosystem monitoring, payment-authentication research, gateway and checkout-flow analysis, and disciplined technical writing oriented toward real transaction-system risk.
 
   social_networks:
     - network: GitHub
@@ -30,7 +30,8 @@ cv:
         start_date: 2018-01
         summary: Conduct independent security and threat-intelligence research focused on the card-not-present fraud ecosystem, payment abuse patterns, and attacker techniques targeting online transaction flows.
         highlights:
-          - Monitor adversarial Telegram channels and earlier IRC carding communities to study fraud TTPs, tooling patterns, and actor tradecraft relevant to card-not-present abuse.
+          - Have directly monitored adversarial communities for 8+ years since 2018, including earlier IRC carding communities and ongoing Telegram channels, to study fraud TTPs, tooling patterns, and actor tradecraft relevant to card-not-present abuse.
+          - Since 2019, have developed this long-term monitoring through an academic research lens focused on understanding why fraud actors operate the way they do, how tooling evolves, and how payment-abuse ecosystems adapt over time.
           - Analyze fraud tooling, infrastructure patterns, and protocol abuse across payment environments, with focus on BIN enumeration, payment authentication flows, credential abuse, and access-control-related flaws.
           - Conduct protocol-level research on payment authentication systems with emphasis on trust boundaries, request and response behavior, and secure-by-design analysis.
           - Reverse engineer payment and authentication flows across gateway and orchestration patterns in support of protocol analysis and remediation design.
@@ -43,9 +44,9 @@ cv:
         start_date: 2026
         summary: Lead a faculty-supervised academic research effort on payment protocols, fintech infrastructure, and protocol-security weaknesses relevant to fraud enablement and secure-by-design improvements.
         highlights:
-          - Serve as lead author for ongoing research on EMV 3DS flows, payment gateway behavior, and attacker-observable trust-boundary failures in real-world transaction systems.
-          - Perform core technical analysis, research writing, and trace review for publication-oriented work on payment authentication, access-control weaknesses, and defensible remediation approaches.
-          - Revised the project after a weak reject and extended the work with new protocol-level findings for resubmission to a stronger security venue.
+          - Serve as lead author for thesis-driven and publication-oriented research on EMV 3DS flows, payment gateway behavior, and attacker-observable trust-boundary failures in real-world transaction systems.
+          - Perform core technical analysis, research writing, and trace review for ongoing work on payment authentication, access-control weaknesses, and defensible remediation approaches.
+          - Advance thesis work and manuscript development derived from the project, extending the analysis with new protocol-level findings and stronger evidence.
           - Support academic investigation of cryptographic auditing questions and entropy-related security issues in applied security contexts.
 
     Projects:
@@ -58,7 +59,7 @@ cv:
           - Added reproducibility support through scenario snapshots, local payload validation, and threat-model documentation.
 
       - name: Ongoing Research on Payment Authentication Protocol Security
-        summary: Multi-author faculty-supervised research project under revision for submission to a stronger security venue.
+        summary: Multi-author faculty-supervised, thesis-aligned research project with manuscript development in progress for security-venue submission.
         highlights:
           - Focuses on payment authentication protocols, ecosystem trust boundaries, and implementation-facing security design questions.
           - Emphasizes disciplined scope control, conservative claims, and engineering-focused communication for sensitive protocol-security work.
