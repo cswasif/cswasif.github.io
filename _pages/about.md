@@ -2,37 +2,70 @@
 layout: about
 title: about
 permalink: /
-subtitle: Early-Career Independent Security Researcher | Payment Security, Fraud Intelligence, and Adversarial Ecosystems
+subtitle: Independent Security Researcher | Payment Security & Fraud Intelligence
 
 profile:
   align: right
   image:
-  image_circular: false # crops the image to make it circular
+  image_circular: false
   more_info: >
     <p>Dhaka, Bangladesh</p>
-    <p>BRAC University</p>
-    <p>Independent research & academic collaboration</p>
-
-selected_papers: false # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
+    <p>BSc Computer Science, BRAC University</p>
+    <p>Expected graduation: 2026</p>
+selected_papers: false
+social: true
 
 announcements:
-  enabled: false # includes a list of news items
-  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 5 # leave blank to include all the news in the `_news` folder
-
+  enabled: false
+  scrollable: true
+  limit: 5
 latest_posts:
   enabled: false
-  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
-  limit: 3 # leave blank to include all the blog posts
+  scrollable: true
+  limit: 3
 ---
 
-I am an early-career independent security researcher and Computer Science undergraduate at BRAC University focused on payment security, fraud intelligence, adversarial ecosystems, and protocol-level analysis of transaction systems. My work is closer to systemic security research than to generic bug-bounty work, with emphasis on payment authentication, attacker-observable trust boundaries, and the practical conditions that enable fraud and abuse.
+I investigate how payment systems are abused and how their authentication controls can be strengthened. My work combines payment-fraud community research with technical analysis of EMV 3-D Secure (3DS), gateway integrations and attacker tools.
 
-I work across EMV 3-D Secure analysis, payment-flow investigation, fraud tooling research, adversarial community monitoring, gateway reverse engineering, and remediation-oriented security writing. I am strongest when turning messy real-world behavior into defensible findings, bounded claims, and actionable guidance for security, fraud, risk, and product stakeholders.
+I have regularly investigated fraud communities since 2018 through independent research. Alongside this work, I am completing my BSc in Computer Science at BRAC University, where I lead faculty-supervised payment-security thesis research.
 
-Recent work includes the open, vendor-neutral [EMV 3-D Secure Protocol Lab](https://cnpshield.github.io/3dslab/), an interactive reference for visualizing and debugging 3DS browser and app flows across published specification versions. I also lead a faculty-supervised payment-security research effort focused on protocol behavior, ecosystem trust boundaries, and attacker-observable weaknesses in real-world transaction systems.
+[Explore my protocol lab](https://cnpshield.github.io/3dslab/) · [View my CV]({{ '/cv/' | relative_url }}) · [Contact me](mailto:md.wasif.faisal@g.bracu.ac.bd)
 
-This site focuses on a small number of things I want to be known for: payment-security research, fraud-ecosystem analysis, protocol investigation, and disciplined technical writing that helps teams reason about real abuse conditions.
+## Selected work
 
-You can review my [CV](/cv/), connect on [LinkedIn](https://www.linkedin.com/in/cswasif/), browse my work on [GitHub](https://github.com/cswasif), or explore the [EMV 3-D Secure Protocol Lab](https://cnpshield.github.io/3dslab/).
+### EMV 3-D Secure Protocol Lab
+
+**Public project · Protocol analysis and technical explanation**
+
+I built a vendor-neutral, interactive reference for exploring browser and app authentication flows. The lab organises protocol messages, payloads and decision points to help readers inspect payment-authentication behaviour. It is an educational reference, not a production 3DS server.
+
+[Open the lab](https://cnpshield.github.io/3dslab/)
+
+### Payment-authentication research
+
+**Faculty-supervised thesis · Project lead and lead author · 2025–present**
+
+I investigate payment-authentication behaviour and trust boundaries, organise technical evidence and develop remediation guidance. My ongoing work includes a potentially systemic EMV 3DS confidentiality concern and coordinated disclosure communications.
+
+A revised manuscript is in preparation for submission. Unpublished findings and disclosure materials are not shared on this site.
+
+### Fraud-community and attacker-tool research
+
+**Independent research · 2018–present**
+
+I monitor carding marketplaces, card shops and fraud communities on Telegram and IRC. My investigations examine card-testing tools, their gateway interactions and BIN-related fraud intelligence, connecting community observations with technical analysis. I distinguish actor claims from findings supported by evidence.
+
+## How I work
+
+- **Investigate:** Examine payment and authentication flows using Burp Suite and browser developer tools.
+- **Analyse:** Review trust boundaries, request binding and response handling; use Python and SQL / SQLite for research automation and investigative analysis.
+- **Communicate:** Prepare technical findings, disclosure memoranda and remediation guidance, explaining both implications and limitations.
+- **Protect sensitive material:** Maintain identity separation, research-account hygiene and careful handling of sources and unpublished evidence.
+
+## Research interests and opportunities
+
+I am interested in payment and web authentication, protocol security, and the study of fraud and online abuse. I welcome conversations about security-research and fraud-intelligence roles, paid research opportunities and future doctoral study.
+
+I am based in Dhaka, Bangladesh. For opportunities or research enquiries, please contact me by [email](mailto:md.wasif.faisal@g.bracu.ac.bd) or [LinkedIn](https://www.linkedin.com/in/cswasif/).
+
+[GitHub](https://github.com/cswasif)
