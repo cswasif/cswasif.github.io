@@ -1,9 +1,11 @@
-"AJP":
-  url: https://aapt.scitation.org/journal/ajp
-  color: "#00369f"
+"arXiv":
+  url: https://arxiv.org/
+  color: "#B31B1B"
 
-"PhysRev":
-  url: https://journals.aps.org/
+"FC":
+  url: https://fc27.ifca.ai/
+  color: "#163F57"
 
-"Vision":
-  color: "#009f36"
+"CCS":
+  url: https://www.sigsac.org/ccs/CCS2026/
+  color: "#006699"

@@ -5,8 +5,7 @@ cv_pdf: /assets/rendercv/rendercv_output/wasif_faisal_cv.pdf # path to your CV P
 email: md.wasif.faisal@g.bracu.ac.bd # your email address
 github_username: cswasif # your GitHub user name
 linkedin_username: cswasif # your LinkedIn user name
-rss_icon: false # comment this line to hide the RSS icon
 custom_social:
-  logo: /assets/img/prof_pic_color.png
+  logo: fa-solid fa-flask-vial
   title: EMV 3-D Secure Protocol Lab
   url: https://cnpshield.github.io/3dslab/

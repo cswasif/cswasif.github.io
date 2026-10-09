@@ -2,16 +2,16 @@
 layout: page
 permalink: /publications/
 title: publications
-description: Research outputs and publication-ready work.
-nav: false
+description: Research publications, preprints, and manuscripts in payment security and cyber threat intelligence.
+years: [2026]
+nav: true
 nav_order: 2
-published: false
+published: true
 ---
 
 <!-- _pages/publications.md -->
 
 <!-- Bibsearch Feature -->
-
 {% include bib_search.liquid %}
 
 <div class="publications">

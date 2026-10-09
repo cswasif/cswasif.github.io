@@ -1,10 +1,11 @@
 cv:
   name: Wasif Faisal
-  label: Early-Career Independent Security Researcher | Payment Security & Fraud Intelligence
+  label: Payment Security Research | Cyber Threat Intelligence | Protocol Security
   email: md.wasif.faisal@g.bracu.ac.bd
+  phone: "+880 1792 870839"
   location: Dhaka, Bangladesh
-  image: ""
-  summary: Computer Science undergraduate at BRAC University and early-career independent security researcher focused on payment security, fraud intelligence, authentication ecosystems, and protocol analysis. I bring long-term attacker-informed defensive research, payment-authentication analysis, gateway and checkout-flow investigation, and disciplined technical writing oriented toward real transaction-system risk.
+  image: "assets/img/prof_pic.jpg"
+  summary: Early-career security researcher specializing in payment security, cyber threat intelligence, and transaction protocol analysis. Investigates payment-fraud mechanisms, credential abuse, and authentication vulnerabilities in Card-Not-Present (CNP) and EMV 3-D Secure (3DS) systems, assessing empirical evidence and translating technical findings into defensible risk recommendations.
 
   social_networks:
     - network: GitHub
@@ -17,75 +18,85 @@ cv:
       - institution: BRAC University
         location: Dhaka, Bangladesh
         area: Computer Science
-        studyType: BSc
+        studyType: B.Sc.
+        start_date: 2022
         end_date: 2026
         highlights:
-          - Expected graduation in 2026.
-          - Academic interests include application security, systems security, fintech security, and protocol analysis.
+          - Completed all required B.Sc. credits in Summer 2026; formal certificate issuance expected 29 October 2026.
+          - "B.Sc. Thesis: CNP-SHIELD: Investigating Card-Not-Present (CNP) Vulnerabilities in Payment Gateways; project lead and lead author."
+          - "Supervisors: Md. Akhtaruzzaman Adnan (Senior Lecturer); S. M. Taiabul Haque, PhD (Professor)."
+
+    Publications:
+      - title: "Prefix Count Limits Can Increase First-Hit Discovery in Card Reissuance"
+        authors:
+          - Wasif Faisal
+        date: 2026
+        journal: "Under review for Financial Cryptography and Data Security (FC) 2027 (arXiv:2609.31398)"
+        url: https://arxiv.org/abs/2609.31398
+        highlights:
+          - Lead author. Discovered structural conditions where prefix caps make active cards substantially easier to enumerate in BIN attacks (guessing valid card numbers).
+          - Demonstrated effect in empirical simulations over 50,000 synthetic candidates, providing actionable risk guidance for card issuance policies.
+
+      - title: "Payment Authentication Security (EMV 3-D Secure 2.0)"
+        authors:
+          - Wasif Faisal
+        date: 2025-present
+        journal: "Manuscript in preparation for submission"
+        highlights:
+          - Lead author. Multi-author faculty-supervised research analyzing trust boundaries, request-binding mechanisms, and attacker-observable flaws in commercial 3DS 2.0 deployments.
 
     Experience:
-      - company: Self-employed
-        position: Independent Security Researcher | Payment Security & Threat Intelligence
+      - company: Independent Payment Security Researcher
+        position: Self-Directed Research in Payment Fraud & Adversarial Threat Intelligence
         location: Remote
         start_date: 2018-01
-        summary: Conduct independent security and threat-intelligence research focused on payment abuse patterns, attacker behavior relevant to online transaction flows, and defensive analysis of card-not-present risk.
+        summary: Conduct self-directed research on publicly observable payment fraud, authentication flows, and transaction risks.
         highlights:
-          - Since 2018, have maintained long-term attacker-informed study of payment-abuse ecosystems to understand fraud TTPs, tooling patterns, and tradecraft relevant to card-not-present risk.
-          - Translate long-running independent analysis into structured defensive research focused on how payment-abuse tooling evolves and how transaction ecosystems adapt under adversarial pressure.
-          - Analyze abuse tooling, infrastructure patterns, and protocol misuse across payment environments, with focus on payment authentication flows, credential abuse, and access-control-related weaknesses.
-          - Conduct protocol-level research on payment authentication systems with emphasis on trust boundaries, request and response behavior, and secure-by-design analysis.
-          - Reverse engineer payment and authentication flows across gateway and orchestration patterns in support of protocol analysis and remediation design.
-          - Built the EMV 3-D Secure Protocol Lab, an open vendor-neutral interactive reference for visualizing, comparing, and debugging browser and app 3DS flows across published spec versions.
-          - Produce coordination-safe technical documentation and disclosure materials that translate high-level concerns into actionable engineering guidance.
+          - Track publicly observable payment-abuse ecosystems, analyzing card-testing methodologies, BIN attack tools, and stolen-credential tradecraft across underground communities.
+          - Audit transaction and authentication pipelines to identify missing caller authorization, weak session-transaction binding, and response-handling disclosures.
+          - Translate complex technical vulnerabilities into structured risk reports and control recommendations for payment product, fraud, and security teams.
 
-      - company: BRAC University
-        position: Security Researcher
-        location: Dhaka, Bangladesh
+      - company: ACM Conference on Computer and Communications Security (ACM CCS)
+        position: Artifact Evaluation Program Committee Reviewer, CCS 2026-B
+        location: Artifact Evaluation Track
+        url: https://ccs2026b-artifacts.hotcrp.com/users/pc
         start_date: 2026
-        summary: Contribute to a faculty-supervised academic research effort on payment protocols, fintech infrastructure, and secure-by-design questions under responsible handling constraints.
         highlights:
-          - Support thesis-aligned and publication-oriented research on payment authentication, gateway behavior, and trust-boundary security questions in real-world transaction systems.
-          - Perform core technical analysis, research writing, and trace review for ongoing confidential work on payment-security design and defensible remediation approaches.
-          - Contribute to manuscript development and evidence refinement for research that remains under responsible disclosure and publication timing constraints.
-          - Support academic investigation of cryptographic auditing questions and entropy-related security issues in applied security contexts.
+          - Evaluated submitted research software artifacts, verification scripts, and experimental datasets for correctness, reproducibility, and alignment with paper claims under strict confidentiality.
 
     Projects:
-      - name: EMV 3-D Secure Protocol Lab
-        summary: Open, vendor-neutral interactive reference for visualizing, comparing, and debugging EMV 3DS browser and app flows across published specification versions.
-        url: https://github.com/cnpshield/3dslab
+      - name: "EMV 3-D Secure Protocol Lab"
+        summary: Open, vendor-neutral interactive reference for visualizing and debugging browser and app 3DS flows across published specification versions.
+        url: https://cnpshield.github.io/3dslab/
         highlights:
-          - Mapped message flows, payload structures, and trust boundaries into a reusable research and teaching artifact for security researchers, payment engineers, and educators.
-          - Added versioned payload registries, field-level provenance, and spec-annotation support so protocol behavior can be inspected with precise normative context.
-          - Added reproducibility support through scenario snapshots, local payload validation, and threat-model documentation.
+          - Architected an open, vendor-neutral interactive reference for visualizing, comparing, and debugging browser and app 3DS message flows, trust boundaries, and decision points across published specification versions.
+          - Facilitates technical education, flow debugging, and specification understanding for researchers and engineers.
 
-      - name: Ongoing Research on Payment Authentication Security
-        summary: Multi-author faculty-supervised, thesis-aligned research project with manuscript development in progress under responsible handling constraints.
+      - name: "Payment Gateway Flow Analysis & Vulnerability Research"
+        date: 2026
+        summary: "B.Sc. thesis research investigating card-not-present vulnerabilities in payment gateways and checkout flows."
         highlights:
-          - Focuses on payment authentication, ecosystem trust boundaries, and implementation-facing security design questions without disclosing confidential intermediate findings.
-          - Emphasizes disciplined scope control, conservative claims, and engineering-focused communication for sensitive security research.
-
-      - name: Gateway Integration Analysis and Remediation Design
-        summary: Engineering-focused review of real-world gateway and orchestration flows with repair guidance for response normalization, flow hardening, and integration changes.
-        highlights:
-          - Analyzed merchant-visible behavior, request binding, and authentication-path design tradeoffs across hosted and merchant-hosted integrations.
-          - Drafted coordination-safe technical language that preserved attribution discipline while still making the engineering case clearly.
+          - Project lead and lead author; supervised by Md. Akhtaruzzaman Adnan and Prof. S. M. Taiabul Haque, PhD.
+          - Investigated merchant-visible payment gateway flows, evaluating response normalization, error code leaks, and card verification behavior to design defensive integration mitigations.
 
     Skills:
-      - name: Security Research
+      - name: Payment Security and Risk
         level: Advanced
         icon: fa-solid fa-shield-halved
-        keywords: Web and API security analysis, Product security review, Payment security and EMV 3DS flows, Protocol and standards analysis, Vulnerability research and responsible disclosure
+        keywords: Coordinated vulnerability disclosure (CERT/CC, EMVCo, payment vendors), Cross-organizational security communication, Payment-fraud analysis, BIN attacks, EMV 3DS 2.0 protocol analysis, Transaction-risk assessment, Evidence-based technical reporting
 
-      - name: Fraud Intelligence
-        level: Advanced
-        icon: fa-solid fa-magnifying-glass
-        keywords: Fraud and risk signal analysis, Threat-intelligence collection, Adversarial tradecraft analysis, Payment gateway reverse engineering, Browser-flow debugging
-
-      - name: Tooling
+      - name: Tools and Verification
         level: Advanced
         icon: fa-solid fa-laptop-code
-        keywords: Python, PowerShell, SQLite, Burp Suite, Git, Linux, Browser developer tools, Technical writing
+        keywords: Python, SQL/SQLite, Formal verification (ProVerif, Tamarin), Burp Suite, Browser developer tools, Git, Linux, PowerShell, LaTeX
+
+      - name: Leadership and Extracurriculars
+        level: Advanced
+        icon: fa-solid fa-users
+        keywords: Assistant Director of Marketing (BUNSC), Senior Executive for Research & Publication (BUEDF), Senior Executive for HR (BULDF), Organizing Committee Volunteer (17th Convocation)
 
     Languages:
       - name: English
         summary: Fluent
+      - name: Bengali
+        summary: Native
