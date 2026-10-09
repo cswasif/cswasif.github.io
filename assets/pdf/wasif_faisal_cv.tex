@@ -1,0 +1,146 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{tgheros}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[a4paper,left=13.5mm,right=13.5mm,top=10.5mm,bottom=10.5mm]{geometry}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+% Curated Executive Color Palette
+\definecolor{accent}{HTML}{0D2D44}      % Deep Midnight Navy
+\definecolor{subaccent}{HTML}{1A5276}   % Slate Steel Blue
+\definecolor{body}{HTML}{1E2227}        % Rich Charcoal
+\definecolor{muted}{HTML}{505962}       % Neutral Slate
+\definecolor{rulecolor}{HTML}{CBD5E1}   % Sleek Hairline Divider
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=subaccent,
+  linkcolor=subaccent,
+  pdftitle={Wasif Faisal - Payment Security Research CV},
+  pdfauthor={Wasif Faisal},
+  pdfsubject={Curriculum Vitae - Payment Security Research and Threat Intelligence},
+  pdfkeywords={Payment Security, Cyber Threat Intelligence, EMV 3DS, Card-Not-Present, Fintech Security, Computer Science},
+  pdfdisplaydoctitle=true
+}
+\urlstyle{same}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\emergencystretch}{1.5em}
+\color{body}
+\raggedright
+
+% Clean Section Styling with Crisp Horizontal Divider
+\titleformat{\section}
+  {\color{accent}\fontsize{9.8}{11.8}\selectfont\bfseries}
+  {}{0em}{}
+  [{\vspace{1.8pt}{\color{rulecolor}\hrule height 0.6pt}\vspace{2.8pt}}]
+\titlespacing*{\section}{0pt}{5.5pt}{2.2pt}
+
+% Itemize Tuning
+\setlist[itemize]{leftmargin=12pt,label=\raisebox{0.15ex}{\tiny\textbullet},itemsep=1.2pt,topsep=1.2pt,parsep=0pt,partopsep=0pt}
+
+% Helper Macros
+\newcommand{\entry}[4]{%
+  \textbf{#1}\hfill {\fontsize{8.9}{10.8}\selectfont\textbf{#2}}\par
+  {\color{muted}\fontsize{8.8}{10.6}\selectfont#3}\hfill {\color{muted}\fontsize{8.8}{10.6}\selectfont#4}\par
+}
+
+\begin{document}
+
+% Header
+\begin{center}
+  {\fontsize{21}{23}\selectfont\bfseries\color{accent} Wasif Faisal}\par
+  \vspace{2.5pt}
+  {\fontsize{9.8}{11.5}\selectfont\bfseries\color{subaccent} Payment Security Research \enspace\textbullet\enspace Cyber Threat Intelligence \enspace\textbullet\enspace Protocol Security}\par
+  \vspace{3.5pt}
+  {\color{muted}\fontsize{8.7}{10.5}\selectfont
+    Dhaka, Bangladesh \enspace\textbullet\enspace
+    \href{tel:+8801792870839}{+880 1792 870839} \enspace\textbullet\enspace
+    \href{mailto:md.wasif.faisal@g.bracu.ac.bd}{md.wasif.faisal@g.bracu.ac.bd}\par
+    \vspace{2pt}
+    \href{https://cswasif.github.io/}{cswasif.github.io} \enspace\textbullet\enspace
+    \href{https://www.linkedin.com/in/cswasif}{linkedin.com/in/cswasif} \enspace\textbullet\enspace
+    \href{https://github.com/cswasif}{github.com/cswasif}
+  }
+\end{center}
+\vspace{-2pt}
+
+% Profile
+\section*{PROFILE}
+{\fontsize{8.9}{11}\selectfont
+Early-career security researcher specializing in \textbf{payment security}, cyber threat intelligence, and transaction protocol analysis. Investigates payment-fraud mechanisms, credential abuse, and authentication vulnerabilities in Card-Not-Present (CNP) and EMV 3-D Secure (3DS) architectures, assessing empirical evidence and translating technical findings into defensible risk recommendations.
+}\par
+
+% Education
+\section*{EDUCATION}
+\entry{BRAC University}{Summer 2026}{B.Sc. in Computer Science}{Dhaka, Bangladesh}
+\vspace{1.2pt}
+{\fontsize{8.9}{10.8}\selectfont
+Completed all degree requirements in Summer 2026; formal certificate issuance scheduled for 29 October 2026.\par
+\vspace{1pt}
+\textbf{B.Sc. Thesis:} \emph{CNP-SHIELD: Investigating Card-Not-Present (CNP) Vulnerabilities in Payment Gateways} (Project Lead \& Lead Author).\par
+\vspace{1pt}
+\textbf{Thesis Supervisors:} \href{https://cse.bracu.ac.bd/faculty_profile/408/md_akhtaruzaman_adnan}{Md. Akhtaruzzaman Adnan} (Senior Lecturer); \href{https://www.bracu.ac.bd/about/people/s-m-taiabul-haque-phd}{S. M. Taiabul Haque, PhD} (Professor).\par
+}
+
+% Publications & Preprints
+\section*{PUBLICATIONS \& MANUSCRIPTS}
+{\fontsize{8.9}{10.8}\selectfont
+\entry{\href{https://arxiv.org/abs/2609.31398}{Prefix Count Limits Can Increase First-Hit Discovery in Card Reissuance}}{2026}{\emph{Under review for Financial Cryptography and Data Security (FC) 2027} \enspace\textbullet\enspace \href{https://arxiv.org/abs/2609.31398}{\texttt{arXiv:2609.31398}}}{Lead Author}
+\vspace{1.2pt}
+Discovered structural conditions where prefix caps make active cards substantially easier to enumerate in BIN attacks (guessing valid card numbers); demonstrated the effect via empirical simulations over 50,000 synthetic candidates. The findings equip card issuers and risk teams to rigorously audit reissuance policies for discovery risk.\par
+\vspace{3.5pt}
+\entry{Payment Authentication Security (EMV 3-D Secure 2.0)}{2025--Present}{\emph{Manuscript in preparation for submission}}{Lead Author}
+\vspace{1.2pt}
+Multi-author faculty-supervised research analyzing trust boundaries, request-binding mechanisms, and attacker-observable flaws across commercial 3DS 2.0 deployments and checkout orchestrations.\par
+}
+
+% Research Experience
+\section*{RESEARCH EXPERIENCE}
+\entry{Independent Payment Security Researcher}{Jan 2018--Present}{Self-Directed Research in Payment Fraud \& Adversarial Threat Intelligence}{Remote}
+\vspace{1.2pt}
+\begin{itemize}
+  \item Track publicly observable payment-abuse ecosystems, analyzing card-testing methodologies, BIN attack tools, and stolen-credential tradecraft across underground communities.
+  \item Evaluate transaction and authentication pipelines to identify missing caller authorization, weak session-transaction binding, and response-handling disclosures.
+  \item Translate complex technical vulnerabilities into structured risk reports and control recommendations for payment product, fraud, and security teams.
+\end{itemize}
+
+% Selected Research Projects & Artifacts
+\section*{SELECTED RESEARCH PROJECTS \& ARTIFACTS}
+{\fontsize{8.9}{10.8}\selectfont
+\entry{\href{https://cnpshield.github.io/3dslab/}{EMV 3-D Secure Protocol Lab}}{2025--Present}{Interactive Protocol Explorer \enspace\textbullet\enspace \href{https://cnpshield.github.io/3dslab/}{\texttt{cnpshield.github.io/3dslab}}}{Public Research Resource}
+\vspace{1.2pt}
+Architected an open, vendor-neutral interactive reference for visualizing, comparing, and debugging browser and app 3DS message flows, trust boundaries, and decision points across published specification versions.\par
+\vspace{3.5pt}
+\entry{Payment Gateway Flow Analysis \& Vulnerability Research}{2024--2026}{Undergraduate Thesis Artifacts \enspace\textbullet\enspace Department of CSE, BRAC University}{Applied Research}
+\vspace{1.2pt}
+Investigated merchant-visible payment gateway flows, evaluating response normalization, error code leaks, and card verification behavior to design defensive integration mitigations.\par
+}
+
+% Academic Service
+\section*{ACADEMIC SERVICE}
+{\fontsize{8.9}{10.8}\selectfont
+\entry{\href{https://ccs2026b-artifacts.hotcrp.com/users/pc}{Artifact Evaluation Program Committee Reviewer}}{2026}{\href{https://ccs2026b-artifacts.hotcrp.com/users/pc}{ACM Conference on Computer and Communications Security (CCS 2026-B)}}{Artifact Evaluation Track}
+\vspace{1.2pt}
+Evaluated submitted research software artifacts, verification scripts, and experimental datasets for correctness, reproducibility, and alignment with paper claims, observing strict peer-review confidentiality.\par
+}
+
+% Core Competencies & Skills
+\section*{SKILLS \& TECHNICAL COMPETENCIES}
+{\fontsize{8.9}{10.8}\selectfont
+\textbf{Payment Security \& Risk:} Coordinated vulnerability disclosure (CERT/CC, EMVCo, payment vendors), cross-organizational security communication, payment-fraud analysis, BIN attacks, EMV 3DS 2.0 protocol analysis, transaction-risk assessment, and evidence-based technical reporting.\par
+\vspace{2.2pt}
+\textbf{Tools \& Verification:} Python, SQL/SQLite, formal verification (ProVerif, Tamarin), Burp Suite, browser developer tools, Git, Linux, PowerShell, and \LaTeX.\par
+\vspace{2.2pt}
+\textbf{Leadership \& Activities:} Assistant Director of Marketing (BUNSC), Senior Executive for Research \& Publication (BUEDF), Senior Executive for HR (BULDF), Organizing Committee Volunteer (17th Convocation), BRAC University.\par
+}
+
+\end{document}
