@@ -3,7 +3,7 @@ layout: page
 title: projects
 permalink: /projects/
 description: Selected research artifacts, tools, and analysis work.
-nav: true
+nav: false
 nav_order: 3
 display_categories:
 horizontal: false

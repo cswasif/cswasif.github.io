@@ -1,0 +1,43 @@
+"education":
+- "institution": "BRAC University"
+  "degree": "B.Sc. in Computer Science"
+  "details":
+  - "Completed all required B.Sc. credits in Summer 2026"
+  - "B.Sc. thesis: CNP-SHIELD: Investigating Card-Not-Present (CNP) Vulnerabilities in Payment Gateways; project lead and lead author"
+  - "Thesis supervisors: Md. Akhtaruzzaman Adnan, Senior Lecturer; S. M. Taiabul Haque, PhD, Professor"
+  "date": "2026"
+
+"experience":
+- "role": "Independent Payment Security Researcher (self-directed)"
+  "institution": "Payment-fraud and cyber threat-intelligence research"
+  "extra": "Remote"
+  "date": "Jan 2018 -- Present"
+  "items":
+  - "text": "Research publicly observable payment fraud, including card testing, attempts to identify valid card numbers, and misuse of stolen credentials."
+    "date": "2018 -- Present"
+  - "text": "Review payment and authentication processes to check whether systems verify who is making each request and link it to the correct transaction; identify failure scenarios and signs of abuse."
+    "date": "2024 -- Present"
+  - "text": "Translate findings into clear reports and practical recommendations for fraud, risk, product, and security teams, explaining how technical weaknesses create payment risk."
+    "date": "2024 -- Present"
+
+- "role": "Artifact Evaluation Program Committee Reviewer"
+  "institution": "ACM Conference on Computer and Communications Security (CCS 2026-B)"
+  "extra": "BRAC University"
+  "date": "2026"
+  "items":
+  - "text": "Assess research software and datasets against paper claims; check that they work as documented and can be reproduced, while maintaining confidentiality."
+    "date": "2026"
+
+"award":
+- "detail": "Assistant Director of Marketing | BUNSC, BRAC University"
+  "date": "2024 -- 2025"
+  "items": []
+- "detail": "Senior Executive (Research & Publication) | BUEDF, BRAC University"
+  "date": "2023 -- 2024"
+  "items": []
+- "detail": "Senior Executive (HR) | BULDF, BRAC University"
+  "date": "2023 -- 2024"
+  "items": []
+- "detail": "Organizing Committee Volunteer | BRAC University 17th Convocation"
+  "date": "2026"
+  "items": []

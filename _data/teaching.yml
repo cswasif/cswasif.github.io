@@ -1,0 +1,14 @@
+"Service":
+- "role": "Artifact Review & Program Committee"
+  "institution": !!null "null"
+  "date": !!null "null"
+  "items":
+  - "text": "ACM Conference on Computer and Communications Security (CCS 2026-B) - Artifact Evaluation Track Reviewer"
+    "date": "2026"
+- "role": "Vulnerability Disclosure & Coordination"
+  "institution": !!null "null"
+  "date": !!null "null"
+  "items":
+  - "text": "Responsible and coordinated vulnerability disclosures with CERT/CC, EMVCo, and payment processors"
+    "date": "2024 -- 2026"
+

@@ -1,16 +1,15 @@
 ---
 layout: page
-title: Payment Authentication Security (EMV 3-D Secure 2.0)
-description: Faculty-supervised research on EMV 3DS behavior, ecosystem trust boundaries, and attacker-observable weaknesses in transaction systems.
+title: "The 3DS Oracle: BIN Attack via the Network"
+description: Architectural and empirical study showing how browser-mediated EMV 3DS continuation boundaries act as pre-authorization screening oracles (arXiv:2610.32206).
 importance: 3
+redirect: https://arxiv.org/abs/2610.32206
 ---
 
-This work centers on payment authentication as a systemic security problem rather than an isolated implementation bug.
+This research paper investigates EMV 3-D Secure (3DS) as a protocol, integration surface, and governance problem:
 
-The research focuses on:
-
-- **EMV 3DS Protocol Analysis**: Examining 3DS 2.0 behavior across real-world transaction environments and checkout configurations.
-- **Trust Boundaries & Request Binding**: Evaluating attacker-observable weaknesses, permission verification gaps, and liability-shift mechanics.
-- **Defensible Findings**: Disciplined scope control, conservative claims, and remediation-oriented writing for card networks, issuers, and gateways.
-
-Lead author; manuscript in preparation for submission.
+- **Venue**: [arXiv:2610.32206](https://arxiv.org/abs/2610.32206) (cs.CR).
+- **Authors**: Wasif Faisal (Lead Author) and Suprava Saha Dibya.
+- **Key Insight**: Client-visible continuation boundaries in browser-mediated 3DS flows can reflect routing and authentication state before financial authorization, functioning as a pre-authorization card-screening oracle.
+- **Evaluation**: Empirical tests separated researcher-owned anchor cards from bounded comparison PANs across 6 of 7 tested ACS/card-range cohorts.
+- **Remediation**: Recommends consortium-level reforms, including strict minimization of client-visible pre-authorization responses and stronger client authenticity and session binding.

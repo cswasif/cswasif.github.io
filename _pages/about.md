@@ -2,47 +2,32 @@
 layout: about
 title: about
 permalink: /
-subtitle: Payment Security Research | Cyber Threat Intelligence | Protocol Security
+description:
 
 profile:
   align: right
   image: prof_pic.jpg
-  image_circular: false
   more_info: >
-    <p>Dhaka, Bangladesh</p>
-    <p>B.Sc. in Computer Science</p>
-    <p>BRAC University (Summer 2026)</p>
-selected_papers: true
-social: true
+    <p style="text-align: center; width: 100%; font-size: 0.82rem; word-break: break-all; margin-top: 6px;"><a href="mailto:md.wasif.faisal@g.bracu.ac.bd"><i class="fa-solid fa-envelope"></i> md.wasif.faisal@g.bracu.ac.bd</a></p>
 
-announcements:
-  enabled: false
-  scrollable: true
-  limit: 5
-latest_posts:
-  enabled: false
-  scrollable: true
-  limit: 3
+news: false
+selected_papers: false
+social: true
 ---
 
-I am an early-career security researcher focused on payment security and cyber threat intelligence. I investigate payment-fraud methods and weaknesses in online payment and authentication systems, assess empirical evidence, and turn technical findings into practical risk recommendations.
+<strong style="color: var(--global-theme-color);">Early-career security researcher specializing in payment security, cyber threat intelligence, and transaction protocol analysis.</strong>
 
-My work bridges long-running independent research into payment-fraud ecosystems (ongoing since 2018) with rigorous technical and protocol-level analysis of EMV 3-D Secure (3DS), payment gateway integrations, and adversarial tooling. I completed all required B.Sc. in Computer Science credits at BRAC University in Summer 2026, where I led faculty-supervised payment security thesis research on Card-Not-Present (CNP) vulnerabilities.
+I study payment fraud and authentication weaknesses, using empirical evidence and protocol analysis to turn technical findings into practical risk recommendations.
+My goal is to protect digital payments, authentication pipelines, and customer transactions from emerging adversarial abuse.
 
-[View my CV]({{ '/cv/' | relative_url }}) · [Publications]({{ '/publications/' | relative_url }}) · [Projects]({{ '/projects/' | relative_url }}) · [LinkedIn](https://www.linkedin.com/in/cswasif) · [GitHub](https://github.com/cswasif) · [Email](mailto:md.wasif.faisal@g.bracu.ac.bd)
+The notable works include
+- pre-authorization screening oracles ([arXiv'26](https://arxiv.org/abs/2610.32206){:target="\_blank"})
+- card reissuance prefix limits ([arXiv'26](https://arxiv.org/abs/2609.31398){:target="\_blank"}).
 
-## Research in progress
+I completed all degree requirements for my B.Sc. in Computer Science at BRAC University in Summer 2026, where I led faculty-supervised payment security thesis research on Card-Not-Present (CNP) vulnerabilities (*CNP-SHIELD*) under Senior Lecturer [Md. Akhtaruzzaman Adnan](https://cse.bracu.ac.bd/faculty_profile/408/md_akhtaruzaman_adnan){:target="\_blank"} and Professor [S. M. Taiabul Haque, PhD](https://www.bracu.ac.bd/about/people/s-m-taiabul-haque-phd){:target="\_blank"}.
 
-- **Payment Authentication Security (EMV 3-D Secure 2.0)** (2025–Present)  
-  Lead author, manuscript in preparation for submission. Examines protocol trust boundaries, request binding, and attacker-observable weaknesses in online transaction ecosystems.
-- **[Prefix Count Limits Can Increase First-Hit Discovery in Card Reissuance](https://arxiv.org/abs/2609.31398)** (2026)  
-  Lead author; paper under review for Financial Cryptography and Data Security (FC) 2027 ([arXiv:2609.31398](https://arxiv.org/abs/2609.31398)). Demonstrates in simulations with 50,000 synthetic candidates how prefix caps can inadvertently accelerate card discovery in BIN attacks.
+I serve as an Artifact Evaluation Program Committee Reviewer for the ACM Conference on Computer and Communications Security ([CCS 2026-B](https://ccs2026b-artifacts.hotcrp.com/users/pc){:target="\_blank"}).
 
-## Featured project
+Since 2018, I have conducted independent research tracking adversarial card-testing methodologies, BIN attack tools, and underground payment-fraud ecosystems.
 
-**[EMV 3-D Secure Protocol Lab](https://cnpshield.github.io/3dslab/)** — An open, vendor-neutral interactive reference for visualizing, comparing, and debugging browser and app 3DS flows across published specification versions.
-
-## Academic service & thesis
-
-- **[Artifact Evaluation PC Reviewer, ACM CCS 2026-B](https://ccs2026b-artifacts.hotcrp.com/users/pc)**: ACM Conference on Computer and Communications Security. Evaluating reproducibility and operational validity of research artifacts while maintaining strict confidentiality.
-- **B.Sc. Thesis**: *CNP-SHIELD: Investigating Card-Not-Present (CNP) Vulnerabilities in Payment Gateways* (Supervisors: [Md. Akhtaruzzaman Adnan](https://cse.bracu.ac.bd/faculty_profile/408/md_akhtaruzaman_adnan), Senior Lecturer; [Prof. S. M. Taiabul Haque, PhD](https://www.bracu.ac.bd/about/people/s-m-taiabul-haque-phd), Professor).
+I maintain an open interactive EMV 3DS reference, the EMV 3-D Secure Protocol Lab ([website](https://cnpshield.github.io/3dslab/){:target="\_blank"}).

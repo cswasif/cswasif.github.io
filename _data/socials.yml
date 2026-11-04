@@ -1,8 +1,10 @@
 # this file contains the social media links and usernames of the author
 # the socials will be displayed in the order they are defined here
 # for more information, please refer to the documentation of jekyll-socials plugin: https://github.com/george-gca/jekyll-socials
-cv_pdf: /assets/rendercv/rendercv_output/wasif_faisal_cv.pdf # path to your CV PDF file
+cv_pdf: /assets/pdf/wasif_faisal_cv.pdf # path to your CV PDF file
 email: md.wasif.faisal@g.bracu.ac.bd # your email address
+orcid_id: 0000-0003-0696-5623 # your ORCID ID
+scholar_userid: K42crVoAAAAJ # your Google Scholar ID
 github_username: cswasif # your GitHub user name
 linkedin_username: cswasif # your LinkedIn user name
 custom_social:

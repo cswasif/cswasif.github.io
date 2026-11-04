@@ -1,0 +1,20 @@
+- "section": "Preprints"
+  "items":
+  - "venue": "arXiv'26"
+    "title": "The 3DS Oracle: BIN Attack via the Network."
+    "authors": ["Faisal, W.", "Dibya, S. S."]
+    "note": "Lead author"
+    "detail": "arXiv preprint arXiv:2610.32206 [cs.CR], Oct 2026"
+    "links":
+    - {"label": "Paper", "url": "https://arxiv.org/abs/2610.32206"}
+    - {"label": "PDF", "url": "https://arxiv.org/pdf/2610.32206"}
+    - {"label": "Lab", "url": "https://cnpshield.github.io/3dslab/"}
+
+  - "venue": "arXiv'26"
+    "title": "Prefix Count Limits Can Increase First-Hit Discovery in Card Reissuance."
+    "authors": ["Faisal, W."]
+    "note": "Lead author"
+    "detail": "arXiv preprint arXiv:2609.31398 [cs.CR], Sep 2026"
+    "links":
+    - {"label": "Paper", "url": "https://arxiv.org/abs/2609.31398"}
+    - {"label": "PDF", "url": "https://arxiv.org/pdf/2609.31398"}
