@@ -6,6 +6,8 @@ description: "Active abuse in the wild involving a systemic architectural flaw i
 tags: payment-security threat-intelligence 3ds protocol-analysis
 categories: disclosures
 featured: true
+arxiv: "2610.32206"
+author: "Wasif Faisal"
 ---
 
 > 📄 **Full Research Monograph**: [arXiv:2610.32206 [cs.CR]](https://arxiv.org/abs/2610.32206)

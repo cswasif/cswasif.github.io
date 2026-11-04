@@ -9,11 +9,11 @@ last_name: Faisal
 contact_note: >
   Best reached by email or LinkedIn for research, collaboration, and security opportunities.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Early-career independent security researcher focused on payment security, fraud intelligence,
+  Wasif Faisal is an independent security researcher specializing in payment security, fraud intelligence,
   adversarial ecosystems, and protocol analysis of transaction systems.
 footer_text: >
-  Early-career independent security research portfolio focused on payment security, fraud intelligence, and adversarial ecosystems.
-keywords: payment security, fraud intelligence, adversarial ecosystems, EMV 3DS, protocol security, transaction risk, product security
+  Wasif Faisal &middot; Payment Security Researcher &middot; Threat Intelligence &middot; Protocol Analysis
+keywords: Wasif Faisal, Md. Wasif Faisal, cswasif, Payment Security Researcher, payment security, fraud intelligence, adversarial ecosystems, EMV 3DS, EMV 3-D Secure, 3DS Oracle, BIN attacks, CNP fraud, Card-Not-Present, protocol security, transaction risk, BRAC University
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: favicon.svg # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 apple_touch_icon: favicon.png # image name in /assets/img/ (or a rooted path / absolute URL) used for iOS home-screen bookmarks; needs a real 180x180 PNG, since Safari ignores the emoji favicon above. Left empty, iOS falls back to a screenshot of the page.
@@ -109,9 +109,9 @@ max_width: 930px
 # -----------------------------------------------------------------------------
 # Display links to the page with a preview object on social media.
 # see https://schema.org/docs/faq.html for more information
-serve_og_meta: false # Include Open Graph meta tags in the HTML head
-serve_schema_org: false # Include Schema.org in the HTML head
-og_image: # The site-wide (default for all links) Open Graph preview image
+serve_og_meta: true # Include Open Graph meta tags in the HTML head
+serve_schema_org: true # Include Schema.org in the HTML head
+og_image: prof_pic.jpg # The site-wide (default for all links) Open Graph preview image
 
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification
