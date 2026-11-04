@@ -1,0 +1,157 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title>Security Disclosure: The 3DS Oracle and the Tragedy of the Payment Commons | Wasif Faisal</title> <meta name="author" content="Wasif Faisal"> <meta name="description" content="Active abuse in the wild involving a systemic architectural flaw in browser-mediated 3-D Secure 2.x (3DS) authentication flows."> <meta name="keywords" content="payment security, fraud intelligence, adversarial ecosystems, EMV 3DS, protocol security, transaction risk, product security"> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <style>
+  :root {
+    --max-content-width: 930px;
+  }
+</style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="/assets/img/favicon.svg?v=f1c892cd46ee12a287fb545eff405275"> <link rel="apple-touch-icon" href="/assets/img/favicon.png?v=b0040598f4b7d3fe765ab77b24edbb5b"> <link rel="stylesheet" href="/assets/css/main.css?v=3116ba77db9ee1581d05bb3e86fbf7f1"> <link rel="canonical" href="https://cswasif.github.io/blog/2026/security-disclosure-the-3ds-oracle-and-the-tragedy-of-the-payment-commons/"> <script src="/assets/js/theme.js?v=5286c3e4c334d0ecb8fc0c40ff4fa7ec"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
+    initTheme();
+  </script> </head> <body class="fixed-top-nav sticky-bottom-footer"> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> <span class="font-weight-bold">Wasif</span> Faisal </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">about </a> </li> <li class="nav-item "> <a class="nav-link" href="/bio/">bio </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">publications </a> </li> <li class="nav-item active"> <a class="nav-link" href="/blog/">blogs <span class="sr-only">(current)</span> </a> </li> <li class="nav-item "> <a class="nav-link" href="/service/">service </a> </li> <li class="nav-item "> <a class="nav-link" href="/cv/">CV </a> </li> <li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="Open search"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">Security Disclosure: The 3DS Oracle and the Tragedy of the Payment Commons</h1> <p class="post-meta"> Created on November 04, 2026 </p> <p class="post-tags"> <a href="/blog/2026"> <i class="fa-solid fa-calendar fa-sm"></i> 2026 </a>   ·   <a href="/blog/tag/payment-security"> <i class="fa-solid fa-hashtag fa-sm"></i> payment-security</a>   <a href="/blog/tag/threat-intelligence"> <i class="fa-solid fa-hashtag fa-sm"></i> threat-intelligence</a>   <a href="/blog/tag/3ds"> <i class="fa-solid fa-hashtag fa-sm"></i> 3ds</a>   <a href="/blog/tag/protocol-analysis"> <i class="fa-solid fa-hashtag fa-sm"></i> protocol-analysis</a>   ·   <a href="/blog/category/disclosures"> <i class="fa-solid fa-tag fa-sm"></i> disclosures</a> </p> </header> <article class="post-content"> <div id="markdown-content"> <blockquote> <p>📄 <strong>Full Research Monograph</strong>: <a href="https://arxiv.org/abs/2610.32206" rel="external nofollow noopener" target="_blank">arXiv:2610.32206 [cs.CR]</a></p> </blockquote> <p>We are sharing our multi-year monograph early in light of active abuse already visible (over last 6 years) in the wild involving a systemic architectural flaw in browser-mediated 3-D Secure 2.x (3DS).</p> <p>In plain terms, our finding is that some browser-mediated 3DS flows can become an effective Authentication BIN attack surface and a silent card number classification and profiling channel affecting both banks and consumers at global scale.</p> <hr> <h3 id="the-core-architectural-problem">The Core Architectural Problem</h3> <p>The core problem is architectural. Because the protocol is card-number-dependent by design, and because browser-mediated flows provide no strong mechanism for distinguishing a legitimate cardholder session from an off-context fraudulent caller, the overall system can expose useful pre-authorization distinctions before any financial authorization decision begins.</p> <p>In practice, the architecture creates a circular trust delegation trap. The specification formally treats the merchant requestor environment as “out of scope” of its security boundary, yet the protocol simultaneously requires issuers and directory servers to make critical risk, routing, and continuation decisions based entirely on client-supplied data.</p> <p>The merchant implements 3DS believing the protocol will verify the cardholder, while the protocol processes the interaction under the unverified assumption that the merchant has already authenticated the session. Because neither side cryptographically binds the cardholder to the browser context before the card number is routed, an off-context caller can exploit the flow as an unauthenticated lookup interface—either to screen existing card inventory or to reverse-engineer response differentials and harvest new card numbers off-context at scale.</p> <hr> <h3 id="distinct-abuse-patterns">Distinct Abuse Patterns</h3> <p>That creates three distinct abuse paths:</p> <ul> <li> <strong>Card-number harvesting</strong>: An attacker can construct, test, or harvest issuer-relevant card-number candidates off-context for later abuse.</li> <li> <strong>Pre-authorization screening</strong>: Filtering or pre-sorting already stolen-card credentials before a real payment attempt ever reaches the financial authorization rail.</li> <li> <strong>Internal card-range and routing inference (Bank profiling)</strong>: Guessing and mapping bank-internal sub-blocks, active vs. inactive card ranges, and portfolio segmentation by observing 3DS routing differentials. An adversary can probe adjacent ranges to reverse-engineer an issuer’s internal allocation boundaries, identify routed sub-blocks, and infer internal decision paths from client-visible continuation leakage.</li> </ul> <p>Those paths are related, but they matter for different reasons. One helps create attacker inventory, another helps operationalize existing stolen credentials more efficiently, and the third allows adversaries to map and reverse-engineer internal issuer allocation boundaries and routing infrastructure through pre-authorization leakage.</p> <hr> <h3 id="impact-on-issuing-banks-and-network-infrastructure">Impact on Issuing Banks and Network Infrastructure</h3> <p>This is one reason the issue matters beyond cardholder privacy and confidentiality in the narrow sense. If attacker-harvested card numbers are operationalized or publicly exposed at scale, issuing banks can face immediate containment pressure: fraud-response overhead, customer-support disruption, account restrictions, and in some cases emergency card reissuance. Issuers with high account density inside routed range blocks may face the greatest exposure, because dense ranges can make large-scale classification and screening more efficient.</p> <p>It is also a bank-profiling problem. Pre-authorization response differences can leak information not just about individual card numbers, but about issuer-side control structures across card ranges: routing behavior, control segmentation, and differences in how internal paths appear to be handled before authorization begins. In that sense, the issue can expose parts of a bank’s internal routing and decision surface to an off-context caller who should not be able to observe them.</p> <hr> <h3 id="rethinking-card-numbers-as-confidential-secrets">Rethinking Card Numbers as Confidential Secrets</h3> <p>It is also important to be precise about what we are not claiming. Our finding is not that card numbers cease to be regulated personal data (PII). Rather, in modern payment architectures, card numbers can no longer be treated as confidential secrets or as sufficient trust anchors on their own. Once browser-mediated authentication flows allow off-context callers to classify or screen account ranges upstream, the core assumption that presentation of a card number implies secret knowledge or authorization collapses.</p> <p>This is also what makes the issue fundamentally different from ordinary zero-dollar authorization checks. While traditional authorization checks occur downstream on the payment rail during financial processing, this leakage occurs upstream on the authentication rail before financial authorization ever begins. As a result, useful pre-authorization signals can be exposed to an off-context caller without requiring a genuine purchase flow, sitting well ahead of where banks, merchants, and fraud teams typically expect the security boundary to start.</p> <hr> <h3 id="why-reactive-defenses-are-not-enough">Why Reactive Defenses Are Not Enough</h3> <p>Reactive network-side defenses are therefore not enough on their own. While public scheme defenses attempt to detect suspicious traffic patterns around authentication flows, they treat the symptom rather than the cause: they raise probing costs through rate limiting, but leave the underlying response oracle intact. That is why downstream traffic scoring acts as temporary rate limiting rather than a true fix for the underlying leak.</p> <p>This tension is documented directly in public administrative records and patent prosecution filings across the industry. For instance, in patent application <a href="https://patents.google.com/patent/US20260134429A1/en" rel="external nofollow noopener" target="_blank">US 2026/0134429 A1</a> (Conroy et al., filed by Mastercard), payment network engineers formally acknowledged under oath (18 U.S.C. § 1001) that automated bots systematically target 3DS pre-authorization flows (AReq) with guessed and estimated account numbers across entire BIN ranges, relying on authentication response signals to validate live accounts before launching financial fraud (pars. [0005], [0013]). This sworn technical admission stands in sharp contrast to informal vulnerability disclosure responses that historically dismissed pre-authorization probing by asserting that card numbers are “already assumed known.”</p> <p>More critically, the official patent prosecution record demonstrates why reactive heuristics cannot solve an architectural defect. On August 25, 2026, the USPTO issued a Non-Final Office Action rejecting all 20 claims of Mastercard’s application:</p> <ul> <li> <strong>35 U.S.C. § 101</strong>: All 20 claims were rejected as an unpatentable abstract idea (“Certain Methods of Organizing Human Activity - managing commercial interactions”) executed on generic computers. The Examiner established that applying machine learning (XGBoost) and transaction velocity scoring at the 3DS Directory Server amounts to conventional data gathering and statistical filtering, rather than an inventive technical solution to a networking defect.</li> <li> <strong>35 U.S.C. § 102(a)(1) &amp; § 103</strong>: 15 claims (1–2, 4, 6–10, 12, 14–17, 19–20) were rejected as anticipated by Mastercard’s own earlier patent (Thomson et al., <a href="https://patents.google.com/patent/US20220108331A1/en" rel="external nofollow noopener" target="_blank">US 2022/0108331 A1</a>, filed in October 2020), with the remaining claims rejected as obvious over Thomson and prior intrusion-detection literature.</li> </ul> <p>The administrative record confirms what our empirical findings show: attempting to contain automated account-range enumeration solely through downstream traffic scoring and velocity heuristics faces inherent structural limits. Because the underlying protocol exposes distinct continuation paths based on card validity, threat actors can bypass Directory Server velocity rules by rotating distributed residential proxy pools and spoofing browser telemetry. A statistical traffic filter cannot substitute for an architectural confidentiality repair.</p> <p>Just as importantly, this is a composition problem. Individual components can behave conformant within their own local boundaries while the composed browser-mediated flow still leaks useful pre-authorization distinctions to an off-context caller. That matters because it means the exposure does not have to look like a single implementation bug to still be systemic.</p> <hr> <h3 id="public-interest-disclosure-and-call-to-action">Public-Interest Disclosure and Call to Action</h3> <p>This is not just a theoretical concern. Closely related workflows were already publicly visible before our disclosure through public artifacts—including open-source GitHub repositories—abuse-facing services, and even commercial API platforms such as RapidAPI. This is also dual-use research, and we have treated it that way throughout disclosure and coordination. But because abuse is already occurring at massive scale, we are stepping forward with this as public-interest research to help protect affected stakeholders and create urgent awareness.</p> <p>After more than 180 days of disclosure and coordination efforts—including recommendations from CERT/CC to proceed with direct public disclosure, alongside formal notification and advance disclosure notice provided to CISA (Case CCASE0209885)—we believe the relevant question is no longer whether this pattern can be operationalized, but how cheaply and broadly it can be scaled while remaining largely invisible to cardholders. That is why we are making this multi-party issue public now.</p> <p>Because this is a shared, systemic architectural challenge across the entire payment ecosystem rather than an isolated vendor defect, addressing it requires coordinated leadership. We look to global industry leaders, 3DS specialists, and standards bodies—including <strong>Visa</strong>, <strong>Mastercard</strong>, <strong>American Express</strong>, <strong>PayPal</strong>, <strong>Braintree</strong>, <strong>Stripe</strong>, <strong>Adyen</strong>, <strong>G+D Netcetera</strong>, <strong>EMVCo</strong>, and the <strong>PCI Security Standards Council</strong>—alongside banking regulatory observers like the <strong>European Banking Authority (EBA)</strong>, issuing banks, payment networks, PSPs, 3DSS providers, and security teams worldwide, to champion specification-level confidentiality and privacy protections rather than relying solely on reactive defenses (e.g., traffic scoring) or operationalizing around it.</p> <p>3-D Secure is broken at the point where it matters most for pre-authorization confidentiality. We are not claiming that the protocol is not fixable, or that challenge and frictionless flows cannot coexist. Rather, we hope EMVCo in particular will use the current standards revision window to prioritize preventive protocol changes that reduce or remove client-visible pre-authorization leakage at its source:</p> <ol> <li>Minimizing what is exposed before authorization</li> <li>Making continuation behavior more uniform</li> <li>Strengthening requestor-context binding requirements</li> </ol> <p>We outline the full engineering blueprint, tactical ACS stopgaps, and consortium standards proposals in Section V-D (<em>Remediation Roadmap</em>) and Section VI-C (<em>Architectural Trade-offs &amp; Consortium Reform</em>) of the monograph.</p> <p>We welcome feedback, critiques, and corrections from across the security and payment community. As an ongoing public-interest project, we will actively revise and extend our work based on industry insights and collaborative peer review.</p> <p>For inquiries, research feedback, or security collaboration, connect with the lead researcher and principal investigator: <a href="https://www.linkedin.com/in/cswasif" rel="external nofollow noopener" target="_blank">Wasif Faisal on LinkedIn</a>.</p> <hr> <h3 id="dedication--academic-tribute">Dedication &amp; Academic Tribute</h3> <p>We dedicate this work to <a href="https://www.linkedin.com/in/ACoAACZn3cwBBEVKXvSzDcNTUhGO2TPXPiaawac?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAACZn3cwBBEVKXvSzDcNTUhGO2TPXPiaawac" rel="external nofollow noopener" target="_blank">Mohammed Aamir Ali, PhD</a> and honor the late <a href="https://www.linkedin.com/in/ross-anderson-3b001534/" rel="external nofollow noopener" target="_blank">Prof. Ross Anderson</a>. This monograph stands as a deliberate tribute to Ross Anderson’s pioneering legacy in banking security economics and cryptosystem robustness:</p> <blockquote> <p><em>“Be careful when signing or decrypting data that you never let yourself be used as an oracle by your opponent.”</em><br> — <strong>Ross Anderson &amp; Roger Needham</strong> (<em>Principle 3</em>)</p> </blockquote> </div> </article> </div> </div> <footer class="sticky-bottom mt-5" role="contentinfo"> <div class="container"> © Copyright 2026 Wasif Faisal. Early-career independent security research portfolio focused on payment security, fraud intelligence, and adversarial ecosystems. </div> </footer> <script>
+  window.alFolio = {
+    compatBootstrap: false
+  };
+</script> <script src="/assets/js/nav-toggle.js?v=141bd79a73ebc0f0b6ea58e440ae79fc"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?v=e49affc7bd2646f6acdad1dbe02c2359" type="text/javascript"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/assets/al_math/js/mathjax-setup.js"></script> <script src="/assets/js/tooltips-setup.js?v=fe487e99db6c43751e6e7bdb2d6a0611"></script> <script src="/assets/js/no_defer.js?v=53b1b1a645525975c963ce8bf8bfefcf"></script> <script defer src="/assets/js/common.js?v=87baac90f765f2f3362dcf6aaf312a8a"></script> <script defer src="/assets/js/copy_code.js?v=c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?v=896d254890d9b47f0281f63bfccf0dee"></script> <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> <script async src="https://badge.dimensions.ai/badge.js"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/al_img_tools/js/zoom.js"></script> <script defer src="/assets/js/progress-bar.js?v=499464c5c63ced6cf7ad62509f1e2610" type="text/javascript"></script> <script src="https://cdn.jsdelivr.net/npm/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js" integrity="sha256-uMJJ3EoTyfRBoTbR+lrfu1uRQ87RZG8AR3cVNuQVeFg=" crossorigin="anonymous"></script> <script>
+    addBackToTop();
+  </script> <script type="module" src="/assets/al_search/js/search/ninja-keys.min.js"></script> <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys> <script src="/assets/al_search/js/search-setup.js"></script> <script>
+// get the ninja-keys element
+const ninja = document.querySelector('ninja-keys');
+
+// add the home and posts menu items
+ninja.data = [{
+    id: "nav-about",
+    title: "about",
+    section: "Navigation",
+    handler: () => {
+      window.location.href = "/";
+    },
+  },{id: "nav-bio",
+          title: "bio",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/bio/";
+          },
+        },{id: "nav-publications",
+          title: "publications",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/publications/";
+          },
+        },{id: "nav-blogs",
+          title: "blogs",
+          description: "Research notes, disclosures, and payment protocol analysis.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/blog/";
+          },
+        },{id: "nav-service",
+          title: "service",
+          description: "Academic service and coordinated disclosures.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/service/";
+          },
+        },{id: "nav-cv",
+          title: "CV",
+          description: "Early-career security researcher focused on payment security, cyber threat intelligence, and protocol analysis.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/cv/";
+          },
+        },{id: "projects-emv-3-d-secure-protocol-lab",
+          title: 'EMV 3-D Secure Protocol Lab',
+          description: "Open, vendor-neutral interactive reference for visualizing and debugging browser and app 3DS flows across published specification versions.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/emv-3ds-protocol-lab/";
+            },},{id: "projects-cnp-shield-card-not-present-vulnerabilities-in-payment-gateways",
+          title: 'CNP-SHIELD: Card-Not-Present Vulnerabilities in Payment Gateways',
+          description: "B.Sc. thesis research analyzing merchant-visible payment and authentication flows, response handling, and card-testing risk.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/gateway-flow-analysis/";
+            },},{id: "projects-the-3ds-oracle-bin-attack-via-the-network",
+          title: 'The 3DS Oracle: BIN Attack via the Network',
+          description: "Architectural and empirical study showing how browser-mediated EMV 3DS continuation boundaries act as pre-authorization screening oracles (arXiv:2610.32206).",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/payment-authentication-research/";
+            },},{id: "projects-prefix-count-limits-can-increase-first-hit-discovery-in-card-reissuance",
+          title: 'Prefix Count Limits Can Increase First-Hit Discovery in Card Reissuance',
+          description: "Empirical simulation study evaluating card-number discovery risk under prefix caps in BIN attacks (arXiv:2609.31398).",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/prefix-count-limits-card-reissuance/";
+            },},{
+        id: 'social-cv',
+        title: 'CV',
+        section: 'Socials',
+        handler: () => {
+          window.open("/assets/pdf/wasif_faisal_cv.pdf", "_blank");
+        },
+      },{
+        id: 'social-email',
+        title: 'email',
+        section: 'Socials',
+        handler: () => {
+          window.open("mailto:%6D%64.%77%61%73%69%66.%66%61%69%73%61%6C@%67.%62%72%61%63%75.%61%63.%62%64", "_blank");
+        },
+      },{
+        id: 'social-orcid',
+        title: 'ORCID',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://orcid.org/0000-0003-0696-5623", "_blank");
+        },
+      },{
+        id: 'social-scholar',
+        title: 'Google Scholar',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://scholar.google.com/citations?user=K42crVoAAAAJ", "_blank");
+        },
+      },{
+        id: 'social-github',
+        title: 'GitHub',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://github.com/cswasif", "_blank");
+        },
+      },{
+        id: 'social-linkedin',
+        title: 'LinkedIn',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://www.linkedin.com/in/cswasif", "_blank");
+        },
+      },{
+        id: 'social-custom_social',
+        title: 'Custom_social',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://cnpshield.github.io/3dslab/", "_blank");
+        },
+      },{
+      id: 'light-theme',
+      title: 'Change theme to light',
+      description: 'Change the theme of the site to Light',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("light");
+      },
+    },
+    {
+      id: 'dark-theme',
+      title: 'Change theme to dark',
+      description: 'Change the theme of the site to Dark',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("dark");
+      },
+    },
+    {
+      id: 'system-theme',
+      title: 'Use system default theme',
+      description: 'Change the theme of the site to System Default',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("system");
+      },
+    },];
+
+</script> <script src="/assets/al_search/js/shortcut-key.js"></script> </body> </html>
