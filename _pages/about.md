@@ -20,8 +20,10 @@ social: true
 I study payment fraud and authentication weaknesses, using empirical evidence and protocol analysis to turn technical findings into practical risk recommendations.
 My goal is to protect digital payments, authentication pipelines, and customer transactions from emerging adversarial abuse.
 
+> 📢 **Security Disclosure**: Read my recent [Systemic EMV 3-D Secure security disclosure](/blog/2026/security-disclosure-the-3ds-oracle-and-the-tragedy-of-the-payment-commons/) analyzing pre-authorization authentication oracles and active card-testing abuse in browser-mediated 3DS flows.
+
 The notable works include
-- pre-authorization screening oracles ([arXiv'26](https://arxiv.org/abs/2610.32206){:target="\_blank"})
+- pre-authorization screening oracles ([arXiv'26](https://arxiv.org/abs/2610.32206){:target="\_blank"}, [disclosure blog](/blog/2026/security-disclosure-the-3ds-oracle-and-the-tragedy-of-the-payment-commons/))
 - card reissuance prefix limits ([arXiv'26](https://arxiv.org/abs/2609.31398){:target="\_blank"}).
 
 I completed all degree requirements for my B.Sc. in Computer Science at BRAC University in Summer 2026, where I led faculty-supervised payment security thesis research on Card-Not-Present (CNP) vulnerabilities (*CNP-SHIELD*) under Senior Lecturer [Md. Akhtaruzzaman Adnan](https://cse.bracu.ac.bd/faculty_profile/408/md_akhtaruzaman_adnan){:target="\_blank"} and Professor [S. M. Taiabul Haque, PhD](https://www.bracu.ac.bd/about/people/s-m-taiabul-haque-phd){:target="\_blank"}.
