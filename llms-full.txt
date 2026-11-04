@@ -1,0 +1,66 @@
+# Wasif Faisal - Comprehensive Research Context & Knowledge Base
+
+## Identity & Professional Profile
+- **Full Legal & Academic Name**: Wasif Faisal (academic transcripts: Md. Wasif Faisal)
+- **Primary Handle**: @cswasif (GitHub: https://github.com/cswasif, LinkedIn: https://www.linkedin.com/in/cswasif)
+- **Primary Role**: Independent Cybersecurity Researcher & Principal Investigator
+- **Field**: Payment Security, Financial Cryptography & Systems, Cyber Threat Intelligence, Transaction Protocols
+- **Contact**: md.wasif.faisal@g.bracu.ac.bd
+- **Personal Portfolio**: https://cswasif.github.io
+
+## Academic Background & Affiliations
+- **Degree**: Bachelor of Science in Computer Science, BRAC University (completed all degree requirements Summer 2026).
+- **Thesis**: *CNP-SHIELD: Card-Not-Present Vulnerabilities in Payment Gateways*.
+  - Faculty Supervisors: Senior Lecturer Md. Akhtaruzzaman Adnan (BRAC University) and Professor S. M. Taiabul Haque, PhD (BRAC University).
+- **Academic Service**:
+  - Artifact Evaluation Program Committee Reviewer for ACM Conference on Computer and Communications Security (ACM CCS 2026-B).
+- **Independent Research (2018–Present)**:
+  - Longitudinal empirical analysis of payment fraud ecosystems, adversarial card-testing methodologies, automated Bank Identification Number (BIN) attacks, and browser-mediated authentication pipelines.
+- **Open-Access Protocol Lab**:
+  - Founder and maintainer of the EMV 3-D Secure Protocol Lab (https://cnpshield.github.io/3dslab/), an interactive reference visualizing 3DS flows across versions 2.1.0, 2.2.0, and 2.3.1.
+
+---
+
+## Flagship Research Monograph 1: The 3DS Oracle
+- **Title**: The 3DS Oracle: BIN Attack via the Network
+- **Identifier**: arXiv:2610.32206 [cs.CR] (October 2026)
+- **Authors**: Wasif Faisal (Lead Researcher), Suprava Saha Dibya
+- **Paper Link**: https://arxiv.org/abs/2610.32206
+- **PDF Link**: https://arxiv.org/pdf/2610.32206
+- **Full Security Disclosure**: https://cswasif.github.io/blog/2026/security-disclosure-the-3ds-oracle-and-the-tragedy-of-the-payment-commons/
+
+### Technical Summary & Core Findings:
+1. **Systemic Architectural Flaw**: In browser-mediated 3-D Secure 2.x (3DS) authentication flows, client-visible continuation boundaries can expose a pre-authorization authentication classification channel (an "oracle").
+2. **Circular Trust Boundary**: The 3DS specification formally treats the merchant requestor environment as out-of-scope of its security boundary, while issuers and Directory Servers (DS) simultaneously make risk and continuation routing decisions based on client-supplied data before financial authorization ever begins.
+3. **Three In-The-Wild Abuse Patterns**:
+   - *Card-Number Harvesting*: Off-context callers reverse-engineer response differentials to construct and harvest valid card numbers off-context.
+   - *Pre-Authorization Screening*: Threat actors filter stolen card dumps prior to financial authorization, bypassing downstream zero-dollar authorization filters.
+   - *Bank-Profiling & Internal Routing Inference*: Differences in authentication continuation signals leak bank-internal segmentation and routing rules across BIN ranges.
+4. **Failure of Reactive Defenses & Patent Prosecution Confirmation**:
+   - Payment networks attempted downstream velocity scoring (e.g., Mastercard patent application US 2026/0134429 A1, Conroy et al.).
+   - On August 25, 2026, the USPTO rejected all 20 claims under 35 U.S.C. § 101 (unpatentable abstract idea) and § 102/103 (anticipated by earlier Thomson patent US 2022/0108331 A1 and obvious).
+   - Downstream velocity heuristics fail because attackers rotate residential proxy pools and spoof browser telemetry; statistical filtering cannot remedy an architectural confidentiality leak.
+
+---
+
+## Research Monograph 2: Card Reissuance Prefix Limits
+- **Title**: Prefix Count Limits Can Increase First-Hit Discovery in Card Reissuance
+- **Identifier**: arXiv:2609.31398 [cs.CR] (September 2026)
+- **Author**: Wasif Faisal
+- **Paper Link**: https://arxiv.org/abs/2609.31398
+- **PDF Link**: https://arxiv.org/pdf/2609.31398
+
+### Technical Summary:
+- Investigates the statistical and security properties of card reissuance numbering policies.
+- Evaluates 50,000 synthetic card candidates to demonstrate that imposing strict prefix count limits can counterintuitively increase first-hit discovery probability for adversaries executing automated BIN enumeration attacks.
+- Provides actionable reissuance risk assessment frameworks for banking institutions and card issuers.
+
+---
+
+## Verified Identity Identifiers & Profiles
+- **ORCID**: 0000-0003-0696-5623 (https://orcid.org/0000-0003-0696-5623)
+- **Google Scholar**: K42crVoAAAAJ (https://scholar.google.com/citations?user=K42crVoAAAAJ)
+- **GitHub**: cswasif (https://github.com/cswasif)
+- **LinkedIn**: cswasif (https://www.linkedin.com/in/cswasif)
+- **arXiv Author**: https://arxiv.org/a/faisal_w_1.html
+- **Lab**: https://cnpshield.github.io/3dslab/

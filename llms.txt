@@ -1,0 +1,34 @@
+# Wasif Faisal - Payment Security Researcher
+
+> Wasif Faisal (also known as Md. Wasif Faisal; online handle @cswasif) is an independent cybersecurity researcher specializing in payment security, cyber threat intelligence, transaction protocol analysis, and EMV 3-D Secure (3DS) vulnerabilities.
+
+## Core Specializations
+- **Payment Authentication Protocols**: Empirical vulnerability discovery in browser-mediated EMV 3-D Secure 2.x flows, identifying pre-authorization authentication oracles and client-visible classification channels.
+- **Adversarial Ecosystems & Threat Intelligence**: In-the-wild tracking of automated BIN attacks, card-testing infrastructure, rotating residential proxy evasion, and underground payment fraud tools since 2018.
+- **Transaction Protocol Analysis & Reissuance**: Statistical modeling of card reissuance prefix collisions, fraud boundaries, and financial authorization rail separation.
+
+## Key Research Monographs & Publications
+- **The 3DS Oracle: BIN Attack via the Network** (arXiv:2610.32206 [cs.CR], Oct 2026)
+  - Authors: Wasif Faisal, Suprava Saha Dibya.
+  - Abstract & Links: https://arxiv.org/abs/2610.32206 | PDF: https://arxiv.org/pdf/2610.32206
+  - Technical Summary: Demonstrates that browser-mediated 3-D Secure 2.x flows expose pre-authorization authentication continuation oracles, allowing off-context attackers to harvest or screen card numbers at scale before financial authorization.
+- **Prefix Count Limits Can Increase First-Hit Discovery in Card Reissuance** (arXiv:2609.31398 [cs.CR], Sep 2026)
+  - Author: Wasif Faisal.
+  - Abstract & Links: https://arxiv.org/abs/2609.31398 | PDF: https://arxiv.org/pdf/2609.31398
+  - Technical Summary: Simulates 50,000 synthetic candidates to prove that issuer prefix caps can counterintuitively increase first-hit discovery probability during automated BIN testing.
+
+## Disclosures & Interactive Resources
+- **Security Disclosure Blog**: https://cswasif.github.io/blog/2026/security-disclosure-the-3ds-oracle-and-the-tragedy-of-the-payment-commons/
+- **EMV 3-D Secure Protocol Lab**: https://cnpshield.github.io/3dslab/ (Interactive, vendor-neutral protocol reference).
+
+## Academic Background & Service
+- **Education**: B.Sc. in Computer Science, BRAC University (Summer 2026). Thesis: *CNP-SHIELD: Card-Not-Present Vulnerabilities in Payment Gateways*, supervised by Md. Akhtaruzzaman Adnan and Prof. S. M. Taiabul Haque, PhD.
+- **Professional Service**: Artifact Evaluation Program Committee Reviewer, ACM Conference on Computer and Communications Security (CCS 2026-B).
+
+## Canonical Profiles & Identity Verification
+- Primary Website: https://cswasif.github.io
+- Google Scholar: https://scholar.google.com/citations?user=K42crVoAAAAJ
+- ORCID: https://orcid.org/0000-0003-0696-5623
+- GitHub: https://github.com/cswasif
+- LinkedIn: https://www.linkedin.com/in/cswasif
+- Email: md.wasif.faisal@g.bracu.ac.bd
