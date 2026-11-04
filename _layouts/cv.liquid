@@ -1,0 +1,100 @@
+---
+layout: default
+---
+<div class="post">
+  <header class="post-header mb-3">
+    <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+      <h1 class="post-title mb-0">{{ page.title }}</h1>
+      {% if page.cv_pdf %}
+        <div class="cv-actions d-flex gap-2">
+          <a
+            href="{{ page.cv_pdf | relative_url }}"
+            download="Wasif_Faisal_CV.pdf"
+            class="btn btn-sm btn-outline-primary"
+            style="display: inline-flex; align-items: center; gap: 0.35rem; padding: 0.35rem 0.75rem; border-radius: 6px; font-weight: 500;"
+            title="Download PDF"
+          >
+            <i class="fa-solid fa-download"></i> <span>Download</span>
+          </a>
+          <a
+            href="{{ page.cv_pdf | relative_url }}"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-sm btn-primary"
+            style="display: inline-flex; align-items: center; gap: 0.35rem; padding: 0.35rem 0.75rem; border-radius: 6px; font-weight: 500;"
+            title="Open in new tab"
+          >
+            <i class="fa-solid fa-arrow-up-right-from-square"></i> <span>Fullscreen</span>
+          </a>
+        </div>
+      {% endif %}
+    </div>
+    {% if page.description %}
+      <p class="post-description text-muted mt-2 mb-0" style="font-size: 0.95rem;">{{ page.description }}</p>
+    {% endif %}
+  </header>
+
+  <article>
+    {% if page.cv_pdf %}
+      <div
+        class="pdf-viewer-frame my-3"
+        style="
+          position: relative;
+          width: 100%;
+          min-height: 940px;
+          height: 85vh;
+          border: 1px solid var(--global-divider-color);
+          border-radius: 8px;
+          box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+          overflow: hidden;
+          background: #2b2b2b;
+        "
+      >
+        <object
+          data="{{ page.cv_pdf | relative_url }}#view=FitH&toolbar=1"
+          type="application/pdf"
+          width="100%"
+          height="100%"
+          style="display: block; width: 100%; height: 100%; border: none;"
+        >
+          <iframe
+            src="{{ page.cv_pdf | relative_url }}#view=FitH&toolbar=1"
+            title="Curriculum Vitae - Wasif Faisal"
+            width="100%"
+            height="100%"
+            style="border: none; width: 100%; height: 100%;"
+          >
+            <div style="padding: 2.5rem 1rem; text-align: center; color: #fff;">
+              <p style="margin-bottom: 1rem; font-size: 1rem;">Your browser does not support inline PDF viewing.</p>
+              <a
+                href="{{ page.cv_pdf | relative_url }}"
+                class="btn btn-primary"
+                download="Wasif_Faisal_CV.pdf"
+                style="padding: 0.5rem 1rem; border-radius: 6px;"
+              >
+                <i class="fa-solid fa-download"></i> Download Wasif Faisal CV (PDF)
+              </a>
+            </div>
+          </iframe>
+        </object>
+      </div>
+
+      <!-- Mobile helper note -->
+      <div class="text-center mt-2 mb-4 d-block d-sm-none">
+        <a
+          href="{{ page.cv_pdf | relative_url }}"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-sm btn-outline-primary"
+          style="font-size: 0.85rem;"
+        >
+          <i class="fa-solid fa-file-pdf"></i> Open PDF in dedicated reader
+        </a>
+      </div>
+    {% else %}
+      <p>No CV PDF specified. Please add <code>cv_pdf</code> in front matter.</p>
+    {% endif %}
+
+    {{ content }}
+  </article>
+</div>
